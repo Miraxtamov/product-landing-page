@@ -1,12 +1,17 @@
 const elNavbar = document.querySelector(".navbar");
 const ellToggleNavbar = document.querySelector(".toggle-button");
 const elCloseNavbarBtn = document.querySelector(".navbar__close--btn");
+const elNavbarLink = document.querySelector(".navbar__link");
 
 ellToggleNavbar.addEventListener("click", () => {
 	elNavbar.classList.add("navbar-open");
 });
 
 elCloseNavbarBtn.addEventListener("click", () => {
+	elNavbar.classList.remove("navbar-open");
+});
+
+elNavbarLink.addEventListener("click", () => {
 	elNavbar.classList.remove("navbar-open");
 });
 
