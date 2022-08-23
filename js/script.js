@@ -15,6 +15,36 @@ elNavbarLink.addEventListener("click", () => {
 	elNavbar.classList.remove("navbar-open");
 });
 
+const swiper = new Swiper(".mySwiper", {
+	slidesPerView: 3,
+	spaceBetween: 32,
+	slidesPerGroup: 3,
+	centerSlide: true,
+	loop: true,
+	grabCursor: "true",
+	pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+		dynamicBullets: true,
+	},
+	autoplay: {
+		delay: 3000,
+	},
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+		},
+		680: {
+			slidesPerView: 2,
+			spaceBetween: 30,
+		},
+		1024: {
+			slidesPerView: 3,
+			spaceBetween: 30,
+		},
+	},
+});
+
 // DARK - LIGHT MODE
 // DOM Selectors
 const body = document.querySelector("body");
