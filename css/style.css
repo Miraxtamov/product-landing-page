@@ -819,7 +819,7 @@ img {
 	font-size: 18px;
 	font-family: "Montserrat", sans-serif;
 	font-weight: 600;
-	line-height: 22px;
+	line-height: 1.2;
 	color: #ffffff;
 	padding: 11px 19px;
 	background: #02897a;
@@ -827,6 +827,131 @@ img {
 	text-align: center;
 	margin-bottom: 32px;
 	cursor: pointer;
+}
+
+/* ========== WHAT CLIENTS SAY ========== */
+.clients__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 130px;
+	padding-bottom: 20px;
+}
+
+.clients__wrapper--title {
+	font-size: 34px;
+	font-weight: 700;
+	line-height: 1.67;
+	letter-spacing: 0.2px;
+	color: #22343d;
+	margin-bottom: 8px;
+	text-align: center;
+}
+
+.clients__wrapper--description {
+	width: 537px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.75;
+	text-align: center;
+	letter-spacing: 0.2px;
+	color: #22343d;
+	margin-bottom: 50px;
+}
+
+.clients__cards {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 64px;
+}
+
+.clients__cards--card {
+	background: #ffffff;
+	border: 1px solid #dedede;
+	border-radius: 5px;
+	padding: 28px 26px 24px 28px;
+}
+
+.clients__cards--stars {
+	display: flex;
+	gap: 3.67px;
+	margin-bottom: 16px;
+}
+
+.clients__cards--card-text {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 28px;
+	letter-spacing: 0.2px;
+	color: #737373;
+	margin-bottom: 16px;
+}
+
+.clients__cards--card-person-container {
+	display: flex;
+	align-items: center;
+}
+
+.clients__cards--card-person-img img {
+	width: 50px;
+	height: 50px;
+}
+
+.clients__cards--card-person-name-job {
+	margin-left: 14px;
+}
+
+.clients__cards--card-person-name {
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 24px;
+	letter-spacing: 0.2px;
+	color: #02897a;
+}
+
+.clients__cards--card-person-job {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 24px;
+	letter-spacing: 0.2px;
+	color: #252b42;
+}
+
+/* COMPANIES */
+.companies__wrapper {
+	display: flex;
+	align-items: center;
+	width: 968px;
+	padding: 50px;
+	background-color: #02897a;
+	border-radius: 32px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 150px;
+}
+
+.companies__wrapper--info-text {
+	font-size: 32px;
+	font-weight: 600;
+	line-height: 151.4%;
+	color: #ffffff;
+	margin-bottom: 50px;
+}
+
+.companies__wrapper--info--btn {
+	display: inline-block;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 30px;
+	color: #02897a;
+	padding: 12px 35px;
+	background-color: #ffffff;
+	border-radius: 8px;
+}
+
+.companies__wrapper--img {
+	flex-shrink: 0;
+	margin-left: auto;
 }
 
 /* ========== RESPONSIVE ========== */
@@ -912,6 +1037,16 @@ img {
 	.product__card {
 		width: 100%;
 	}
+
+	/* WHAT CLIENTS SAY */
+	.clients__cards {
+		gap: 50px;
+	}
+
+	/* COMPANIES */
+	.companies__wrapper {
+		width: 100%;
+	}
 }
 
 @media (max-width: 1020px) {
@@ -971,6 +1106,18 @@ img {
 
 	.first__wrapper {
 		margin-bottom: 50px;
+	}
+
+	/* WHAT CLIENTS SAY */
+	.clients__cards {
+		grid-template-columns: 1fr 1fr;
+		gap: 30px;
+	}
+
+	/* COMPANIES */
+	.companies__wrapper--img img {
+		width: 350px;
+		height: auto;
 	}
 }
 
@@ -1096,6 +1243,7 @@ img {
 }
 
 @media (max-width: 900px) {
+	/* CUSTOMER SUPPORT */
 	.customer__support {
 		flex-direction: column;
 	}
@@ -1107,6 +1255,16 @@ img {
 
 	.customer__support--info {
 		margin-left: 0;
+	}
+
+	/* COMPANIES */
+	.companies__wrapper--info-text {
+		font-size: 25px;
+	}
+
+	.companies__wrapper--info--btn {
+		padding: 12px 24px;
+		font-size: 16px;
 	}
 }
 
@@ -1128,6 +1286,20 @@ img {
 	.management__wrapper--img {
 		margin-left: 0;
 		margin-bottom: 50px;
+	}
+
+	/* COMPANIES */
+	.companies__wrapper {
+		flex-direction: column-reverse;
+	}
+
+	.companies__wrapper--img {
+		margin-left: 0;
+		margin-bottom: 40px;
+	}
+
+	.companies__wrapper--info-text {
+		font-size: 30px;
 	}
 }
 
@@ -1206,6 +1378,15 @@ img {
 		grid-template-columns: repeat(2, 1fr);
 		gap: 35px;
 	}
+
+	/* WHAT CLIENTS SAY */
+	.clients__wrapper--description {
+		width: 100%;
+	}
+
+	.clients__cards {
+		grid-template-columns: repeat(1, 1fr);
+	}
 }
 
 @media (max-width: 570px) {
@@ -1243,6 +1424,16 @@ img {
 	.customer__support--info-title {
 		font-size: 25px;
 	}
+
+	/* COMPANIES */
+	.companies__wrapper--info-text {
+		font-size: 22px;
+	}
+
+	.companies__wrapper--info--btn {
+		font-size: 14px;
+		padding: 8px 12px;
+	}
 }
 
 @media (max-width: 500px) {
@@ -1279,6 +1470,16 @@ img {
 	.customer__support--info-img_text--text {
 		margin-left: 10px;
 	}
+
+	/* WHAT CLIENTS SAY */
+	.clients__wrapper--title {
+		white-space: nowrap;
+		font-size: 25px;
+	}
+
+	.clients__wrapper--description {
+		font-size: 14px;
+	}
 }
 
 @media (max-width: 451px) {
@@ -1301,6 +1502,21 @@ img {
 	.price__container-card--description {
 		padding-left: 50px;
 		padding-right: 50px;
+	}
+
+	.clients__cards--card-person-img img {
+		width: 40px;
+		height: 40px;
+	}
+
+	.clients__cards--card-text {
+		font-size: 16px;
+	}
+
+	/* COMPANIES */
+	.companies__wrapper--info-text {
+		font-size: 18px;
+		margin-bottom: 20px;
 	}
 }
 
@@ -1381,6 +1597,19 @@ img {
 	.process__wrapper--img img {
 		width: 40px;
 		height: 40px;
+	}
+
+	/* COMPANIES */
+	.companies__wrapper {
+		text-align: center;
+	}
+
+	.companies__wrapper--info {
+		text-align: center;
+	}
+
+	.companies__wrapper--info-text {
+		font-size: 16px;
 	}
 }
 
