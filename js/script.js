@@ -1,7 +1,7 @@
 const elNavbar = document.querySelector(".navbar");
 const ellToggleNavbar = document.querySelector(".toggle-button");
 const elCloseNavbarBtn = document.querySelector(".navbar__close--btn");
-const elNavbarLink = document.querySelector(".navbar__link");
+const elNavbarLink = document.querySelectorAll(".navbar__link");
 
 ellToggleNavbar.addEventListener("click", () => {
 	elNavbar.classList.add("navbar-open");
@@ -11,8 +11,10 @@ elCloseNavbarBtn.addEventListener("click", () => {
 	elNavbar.classList.remove("navbar-open");
 });
 
-elNavbarLink.addEventListener("click", () => {
-	elNavbar.classList.remove("navbar-open");
+elNavbarLink.forEach((link) => {
+	link.addEventListener("click", () => {
+		elNavbar.classList.remove("navbar-open");
+	});
 });
 
 const swiper = new Swiper(".mySwiper", {
@@ -28,13 +30,13 @@ const swiper = new Swiper(".mySwiper", {
 		dynamicBullets: true,
 	},
 	autoplay: {
-		delay: 3000,
+		delay: 2500,
 	},
 	breakpoints: {
 		0: {
 			slidesPerView: 1,
 		},
-		680: {
+		650: {
 			slidesPerView: 2,
 			spaceBetween: 30,
 		},

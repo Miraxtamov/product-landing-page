@@ -632,6 +632,8 @@ img {
 	border: 1px solid #dedede;
 	border-radius: 8px;
 	display: inline-block;
+	min-height: 360px;
+	max-height: auto;
 }
 
 .strategies__card:hover .strategies__card--title {
@@ -649,6 +651,15 @@ img {
 	width: 100%;
 }
 
+.strategies__card--title {
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 1.66;
+	color: #22343d;
+	cursor: pointer;
+	max-height: 70px;
+}
+
 .strategies__card--info {
 	padding: 24px 30px 40px 24px;
 }
@@ -663,14 +674,6 @@ img {
 
 .strategies__card--info-desc span {
 	font-weight: 700;
-	cursor: pointer;
-}
-
-.strategies__card--title {
-	font-weight: 700;
-	font-size: 24px;
-	line-height: 1.66;
-	color: #22343d;
 	cursor: pointer;
 }
 
@@ -1015,6 +1018,10 @@ img {
 	color: #22343d;
 }
 
+.footer__wrapper--links-link:hover {
+	color: #02897a;
+}
+
 .footer__wrapper--input-input {
 	font-size: 16px;
 	width: 325px;
@@ -1023,9 +1030,10 @@ img {
 	border-radius: 4px;
 	font-family: "ProximaNova", sans-serif;
 	line-height: 28px;
-	color: #bcd0e5;
+	color: #22343d;
 	padding: 10px 15px;
 	margin-top: 34px;
+	outline: none;
 }
 
 .footer__wrapper--btn {
@@ -1265,7 +1273,7 @@ img {
 	.navbar-open {
 		display: flex;
 		flex-direction: column;
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -1276,6 +1284,7 @@ img {
 		margin-right: 0;
 		background-color: rgba(2, 137, 122, 0.2);
 		backdrop-filter: blur(20px);
+		z-index: 100;
 	}
 
 	.navbar__list {
