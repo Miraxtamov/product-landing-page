@@ -954,6 +954,101 @@ img {
 	margin-left: auto;
 }
 
+/* ========== FOOTER ========== */
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-bottom: 36px;
+}
+
+.footer__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: baseline;
+}
+
+.footer__socials {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	margin-top: 28px;
+}
+
+.footer__socials--icon {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #edfffc;
+	border-radius: 50%;
+}
+
+.footer__wrapper--links-list,
+.footer__wrapper--links-item,
+.footer__wrapper--links-link {
+	margin: 0;
+	padding: 0;
+}
+
+.footer__wrapper--title {
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 30px;
+	color: #22343d;
+	margin-bottom: 8px;
+}
+
+.title-end {
+	width: 280px;
+}
+
+.footer__wrapper--links-item {
+	margin-bottom: 8px;
+}
+
+.footer__wrapper--links-link {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 35px;
+	color: #22343d;
+}
+
+.footer__wrapper--input-input {
+	font-size: 16px;
+	width: 325px;
+	background-color: #ffffff;
+	border: 1px solid #bcd0e5;
+	border-radius: 4px;
+	font-family: "ProximaNova", sans-serif;
+	line-height: 28px;
+	color: #bcd0e5;
+	padding: 10px 15px;
+	margin-top: 34px;
+}
+
+.footer__wrapper--btn {
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 24px;
+	text-align: center;
+	padding: 8px 15px;
+	color: #ffffff;
+	background: #02897a;
+	border-radius: 4px;
+	margin-top: 21px;
+}
+
+.footer--end {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 30px;
+	color: #22343d;
+	margin-bottom: 46px;
+	text-align: center;
+}
+
 /* ========== RESPONSIVE ========== */
 @media (max-width: 1170px) {
 	/* CUSROMER SUPPORT */
@@ -1266,6 +1361,30 @@ img {
 		padding: 12px 24px;
 		font-size: 16px;
 	}
+
+	/* FOOTER */
+	.footer__wrapper--title {
+		font-size: 18px;
+	}
+
+	.footer__wrapper--links-link {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 865px) {
+	.footer {
+		flex-direction: column;
+	}
+
+	.footer__wrapper--title {
+		margin-top: 30px;
+		font-size: 20px;
+	}
+
+	.footer__wrapper--links-link {
+		font-size: 16px;
+	}
 }
 
 @media (max-width: 850px) {
@@ -1517,6 +1636,23 @@ img {
 	.companies__wrapper--info-text {
 		font-size: 18px;
 		margin-bottom: 20px;
+	}
+
+	/* FOOTER */
+	.footer__wrapper--title {
+		font-size: 18px;
+	}
+
+	.footer__wrapper--links-link {
+		font-size: 14px;
+	}
+
+	.footer__wrapper--input-input {
+		width: 100%;
+	}
+
+	.footer--end {
+		font-size: 14px;
 	}
 }
 
