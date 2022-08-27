@@ -17,6 +17,7 @@ elNavbarLink.forEach((link) => {
 	});
 });
 
+// SLIDER
 const swiper = new Swiper(".mySwiper", {
 	slidesPerView: 3,
 	spaceBetween: 32,
@@ -45,6 +46,20 @@ const swiper = new Swiper(".mySwiper", {
 			spaceBetween: 30,
 		},
 	},
+});
+
+/* SCROLL REVEAL ANIMATION */
+const sr = ScrollReveal({
+	origin: "top",
+	distance: "80px",
+	duration: 2000,
+	reset: true,
+});
+
+// SCROLL - PRODUCT
+sr.reveal(".product__card, .prices__container--cards-card", {
+	interval: 200,
+	duration: 1000,
 });
 
 // DARK - LIGHT MODE
